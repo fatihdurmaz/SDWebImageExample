@@ -11,6 +11,8 @@
 		DEC364362B0B682E00EC015D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC364352B0B682E00EC015D /* ContentView.swift */; };
 		DEC364382B0B682F00EC015D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC364372B0B682F00EC015D /* Assets.xcassets */; };
 		DEC3643B2B0B682F00EC015D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC3643A2B0B682F00EC015D /* Preview Assets.xcassets */; };
+		DEC364422B0B6A0700EC015D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC364412B0B6A0700EC015D /* Image.swift */; };
+		DEC364452B0B6CDF00EC015D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DEC364442B0B6CDF00EC015D /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		DEC364352B0B682E00EC015D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DEC364372B0B682F00EC015D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEC3643A2B0B682F00EC015D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DEC364412B0B6A0700EC015D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC364452B0B6CDF00EC015D /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +59,7 @@
 				DEC364352B0B682E00EC015D /* ContentView.swift */,
 				DEC364372B0B682F00EC015D /* Assets.xcassets */,
 				DEC364392B0B682F00EC015D /* Preview Content */,
+				DEC364412B0B6A0700EC015D /* Image.swift */,
 			);
 			path = SDWebImageExample;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = SDWebImageExample;
+			packageProductDependencies = (
+				DEC364442B0B6CDF00EC015D /* SDWebImageSwiftUI */,
+			);
 			productName = SDWebImageExample;
 			productReference = DEC364302B0B682E00EC015D /* SDWebImageExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = DEC364272B0B682E00EC015D;
+			packageReferences = (
+				DEC364432B0B6CDF00EC015D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = DEC364312B0B682E00EC015D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEC364362B0B682E00EC015D /* ContentView.swift in Sources */,
+				DEC364422B0B6A0700EC015D /* Image.swift in Sources */,
 				DEC364342B0B682E00EC015D /* SDWebImageExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DEC364432B0B6CDF00EC015D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DEC364442B0B6CDF00EC015D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC364432B0B6CDF00EC015D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DEC364282B0B682E00EC015D /* Project object */;
 }
