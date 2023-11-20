@@ -18,21 +18,18 @@ struct ContentView: View {
                 LazyVStack{
                     ForEach(photos){ photo in
                         WebImage(url: photo.downloadURL)
-                        // Supports options and context, like `.delayPlaceholder` to show placeholder only when error
                             .onSuccess { image, data, cacheType in
-                                // Success
                                 print("Başarıyla yüklendi!")
                             }
                             .onFailure{ error in
                                 print("Hata: \(error.localizedDescription)")
                             }
-                            .resizable() // Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size
+                            .resizable()
                             .placeholder{
                                 Rectangle().foregroundStyle(.gray.opacity(0.5))
-                            } // Placeholder Image
-
-                            .indicator(.activity) // Activity Indicator
-                            .transition(.fade(duration: 0.5)) // Fade Transition with duration
+                            }
+                            .indicator(.activity)
+                            .transition(.fade(duration: 0.5))
                             .scaledToFit()
                             .cornerRadius(8)
                         Divider()
@@ -43,7 +40,7 @@ struct ContentView: View {
                 .onAppear{
                     self.photos = decodeImageData()
                 }
-            .navigationTitle("SDWebImage Example")
+                .navigationTitle("SDWebImage Example")
             }
         }
     }
