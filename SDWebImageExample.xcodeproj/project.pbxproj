@@ -13,6 +13,7 @@
 		DEC3643B2B0B682F00EC015D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC3643A2B0B682F00EC015D /* Preview Assets.xcassets */; };
 		DEC364422B0B6A0700EC015D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC364412B0B6A0700EC015D /* Image.swift */; };
 		DEC364452B0B6CDF00EC015D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DEC364442B0B6CDF00EC015D /* SDWebImageSwiftUI */; };
+		DECFB2312B0BDE7C007FCC0B /* SDWebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECFB2302B0BDE7C007FCC0B /* SDWebImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DEC364372B0B682F00EC015D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEC3643A2B0B682F00EC015D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DEC364412B0B6A0700EC015D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		DECFB2302B0BDE7C007FCC0B /* SDWebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDWebImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				DEC364332B0B682E00EC015D /* SDWebImageExampleApp.swift */,
 				DEC364352B0B682E00EC015D /* ContentView.swift */,
+				DECFB2302B0BDE7C007FCC0B /* SDWebImageView.swift */,
 				DEC364372B0B682F00EC015D /* Assets.xcassets */,
 				DEC364392B0B682F00EC015D /* Preview Content */,
 				DEC364412B0B6A0700EC015D /* Image.swift */,
@@ -150,6 +153,7 @@
 			files = (
 				DEC364362B0B682E00EC015D /* ContentView.swift in Sources */,
 				DEC364422B0B6A0700EC015D /* Image.swift in Sources */,
+				DECFB2312B0BDE7C007FCC0B /* SDWebImageView.swift in Sources */,
 				DEC364342B0B682E00EC015D /* SDWebImageExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

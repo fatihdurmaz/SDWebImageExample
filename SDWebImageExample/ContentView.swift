@@ -17,21 +17,8 @@ struct ContentView: View {
             ScrollView {
                 LazyVStack{
                     ForEach(photos){ photo in
-                        WebImage(url: photo.downloadURL)
-                            .onSuccess { image, data, cacheType in
-                                print("Başarıyla yüklendi!")
-                            }
-                            .onFailure{ error in
-                                print("Hata: \(error.localizedDescription)")
-                            }
-                            .resizable()
-                            .placeholder{
-                                Rectangle().foregroundStyle(.gray.opacity(0.5))
-                            }
-                            .indicator(.activity)
-                            .transition(.fade(duration: 0.5))
-                            .scaledToFit()
-                            .cornerRadius(8)
+                        SDWebImageView(url: photo.url.absoluteString)
+
                         Divider()
                     }
                     
@@ -51,246 +38,148 @@ func decodeImageData() -> [Photo] {
     
     [
     {
-    "id": "0",
-    "author": "Alejandro Escamilla",
-    "width": 5000,
-    "height": 3333,
-    "url": "https://unsplash.com/photos/yC-Yzbqy7PY",
-    "download_url": "https://picsum.photos/id/0/5000/3333"
+    "url": "https://api.slingacademy.com/public/sample-photos/6.jpeg",
+    "title": "Apply future response she reduce decide",
+    "user": 30,
+    "id": 6,
+    "description": "Training beautiful age four skin cultural hundred environmental ability blood go physical relate produce tough open police."
     },
     {
-    "id": "1",
-    "author": "Alejandro Escamilla",
-    "width": 5000,
-    "height": 3333,
-    "url": "https://unsplash.com/photos/LNRyGwIJr5c",
-    "download_url": "https://picsum.photos/id/1/5000/3333"
+    "url": "https://api.slingacademy.com/public/sample-photos/7.jpeg",
+    "title": "Fire year candidate too like",
+    "user": 20,
+    "id": 7,
+    "description": "Few address take for special development white career."
     },
     {
-    "id": "2",
-    "author": "Alejandro Escamilla",
-    "width": 5000,
-    "height": 3333,
-    "url": "https://unsplash.com/photos/N7XodRrbzS0",
-    "download_url": "https://picsum.photos/id/2/5000/3333"
+    "url": "https://api.slingacademy.com/public/sample-photos/8.jpeg",
+    "title": "Reflect design camera land girl wind behind side",
+    "user": 13,
+    "id": 8,
+    "description": "Drug if approach out according set home job company wall source trouble act huge easy style physical so month."
     },
     {
-    "id": "3",
-    "author": "Alejandro Escamilla",
-    "width": 5000,
-    "height": 3333,
-    "url": "https://unsplash.com/photos/Dl6jeyfihLk",
-    "download_url": "https://picsum.photos/id/3/5000/3333"
+    "url": "https://api.slingacademy.com/public/sample-photos/9.jpeg",
+    "title": "Per nature research",
+    "user": 2,
+    "id": 9,
+    "description": "Nature focus wonder behind magazine pattern degree far without tree consider."
     },
     {
-    "id": "4",
-    "author": "Alejandro Escamilla",
-    "width": 5000,
-    "height": 3333,
-    "url": "https://unsplash.com/photos/y83Je1OC6Wc",
-    "download_url": "https://picsum.photos/id/4/5000/3333"
+    "url": "https://api.slingacademy.com/public/sample-photos/10.jpeg",
+    "title": "Yard",
+    "user": 30,
+    "id": 10,
+    "description": "Parent talk collection fill between management purpose fish fight real teacher successful me arrive little."
     },
     {
-    "id": "5",
-    "author": "Alejandro Escamilla",
-    "width": 5000,
-    "height": 3334,
-    "url": "https://unsplash.com/photos/LF8gK8-HGSg",
-    "download_url": "https://picsum.photos/id/5/5000/3334"
+    "url": "https://api.slingacademy.com/public/sample-photos/11.jpeg",
+    "title": "Commercial kitchen",
+    "user": 29,
+    "id": 11,
+    "description": "Their base help outside often grow address himself product issue watch pick kid all break ever threat try learn edge degree name order everyone seem interest democratic card reach safe war gun expert."
     },
     {
-    "id": "6",
-    "author": "Alejandro Escamilla",
-    "width": 5000,
-    "height": 3333,
-    "url": "https://unsplash.com/photos/tAKXap853rY",
-    "download_url": "https://picsum.photos/id/6/5000/3333"
+    "url": "https://api.slingacademy.com/public/sample-photos/12.jpeg",
+    "title": "Fact herself",
+    "user": 5,
+    "id": 12,
+    "description": "Car garden begin western over suggest even read nor might price different pick."
     },
     {
-    "id": "7",
-    "author": "Alejandro Escamilla",
-    "width": 4728,
-    "height": 3168,
-    "url": "https://unsplash.com/photos/BbQLHCpVUqA",
-    "download_url": "https://picsum.photos/id/7/4728/3168"
+    "url": "https://api.slingacademy.com/public/sample-photos/13.jpeg",
+    "title": "Produce science chance develop something",
+    "user": 16,
+    "id": 13,
+    "description": "Wonder race yeah seem of argue a final follow evening hair."
     },
     {
-    "id": "8",
-    "author": "Alejandro Escamilla",
-    "width": 5000,
-    "height": 3333,
-    "url": "https://unsplash.com/photos/xII7efH1G6o",
-    "download_url": "https://picsum.photos/id/8/5000/3333"
+    "url": "https://api.slingacademy.com/public/sample-photos/14.jpeg",
+    "title": "Positive particular",
+    "user": 28,
+    "id": 14,
+    "description": "Result democratic design until always parent sell film true social range author expert least reveal those."
     },
     {
-    "id": "9",
-    "author": "Alejandro Escamilla",
-    "width": 5000,
-    "height": 3269,
-    "url": "https://unsplash.com/photos/ABDTiLqDhJA",
-    "download_url": "https://picsum.photos/id/9/5000/3269"
+    "url": "https://api.slingacademy.com/public/sample-photos/15.jpeg",
+    "title": "Again would high particularly American table",
+    "user": 14,
+    "id": 15,
+    "description": "Young follow magazine bar kitchen begin at around home tax north majority especially institution."
     },
     {
-    "id": "10",
-    "author": "Paul Jarvis",
-    "width": 2500,
-    "height": 1667,
-    "url": "https://unsplash.com/photos/6J--NXulQCs",
-    "download_url": "https://picsum.photos/id/10/2500/1667"
+    "url": "https://api.slingacademy.com/public/sample-photos/16.jpeg",
+    "title": "Boy trouble offer candidate maybe mean family",
+    "user": 27,
+    "id": 16,
+    "description": "Chance boy family recent office according stay wrong during bag level which song also movement worker medical people important difference Congress store hotel they southern music statement kind book."
     },
     {
-    "id": "11",
-    "author": "Paul Jarvis",
-    "width": 2500,
-    "height": 1667,
-    "url": "https://unsplash.com/photos/Cm7oKel-X2Q",
-    "download_url": "https://picsum.photos/id/11/2500/1667"
+    "url": "https://api.slingacademy.com/public/sample-photos/17.jpeg",
+    "title": "Pass effect part",
+    "user": 26,
+    "id": 17,
+    "description": "Writer play bank could response TV middle improve front growth act husband provide take trial student hand task most few receive loss allow allow range."
     },
     {
-    "id": "12",
-    "author": "Paul Jarvis",
-    "width": 2500,
-    "height": 1667,
-    "url": "https://unsplash.com/photos/I_9ILwtsl_k",
-    "download_url": "https://picsum.photos/id/12/2500/1667"
+    "url": "https://api.slingacademy.com/public/sample-photos/18.jpeg",
+    "title": "East operation young indeed draw great professor",
+    "user": 25,
+    "id": 18,
+    "description": "Notice organization admit could born laugh event writer ask most debate modern talk quite arm physical nor voice."
     },
     {
-    "id": "13",
-    "author": "Paul Jarvis",
-    "width": 2500,
-    "height": 1667,
-    "url": "https://unsplash.com/photos/3MtiSMdnoCo",
-    "download_url": "https://picsum.photos/id/13/2500/1667"
+    "url": "https://api.slingacademy.com/public/sample-photos/19.jpeg",
+    "title": "Style class that party see eat find",
+    "user": 11,
+    "id": 19,
+    "description": "Senior learn world agreement receive civil range detail everything model interest read film everything important."
     },
     {
-    "id": "14",
-    "author": "Paul Jarvis",
-    "width": 2500,
-    "height": 1667,
-    "url": "https://unsplash.com/photos/IQ1kOQTJrOQ",
-    "download_url": "https://picsum.photos/id/14/2500/1667"
+    "url": "https://api.slingacademy.com/public/sample-photos/20.jpeg",
+    "title": "No white success knowledge player community",
+    "user": 20,
+    "id": 20,
+    "description": "General free fly decide edge yeah their skill work television those claim pull out player leg ok small minute return morning minute son down model series team hot knowledge."
     },
     {
-    "id": "15",
-    "author": "Paul Jarvis",
-    "width": 2500,
-    "height": 1667,
-    "url": "https://unsplash.com/photos/NYDo21ssGao",
-    "download_url": "https://picsum.photos/id/15/2500/1667"
+    "url": "https://api.slingacademy.com/public/sample-photos/21.jpeg",
+    "title": "Nice write individual major conference bed class office shoulder",
+    "user": 10,
+    "id": 21,
+    "description": "In each him half stuff under great."
     },
     {
-    "id": "16",
-    "author": "Paul Jarvis",
-    "width": 2500,
-    "height": 1667,
-    "url": "https://unsplash.com/photos/gkT4FfgHO5o",
-    "download_url": "https://picsum.photos/id/16/2500/1667"
+    "url": "https://api.slingacademy.com/public/sample-photos/22.jpeg",
+    "title": "Apply personal receive and",
+    "user": 23,
+    "id": 22,
+    "description": "Month around PM on group education college any evidence until dog argue him production town on."
     },
     {
-    "id": "17",
-    "author": "Paul Jarvis",
-    "width": 2500,
-    "height": 1667,
-    "url": "https://unsplash.com/photos/Ven2CV8IJ5A",
-    "download_url": "https://picsum.photos/id/17/2500/1667"
+    "url": "https://api.slingacademy.com/public/sample-photos/23.jpeg",
+    "title": "Tax risk guess each court hand sea goal dream",
+    "user": 26,
+    "id": 23,
+    "description": "Million recently economic way short again share bill suggest short son natural."
     },
     {
-    "id": "18",
-    "author": "Paul Jarvis",
-    "width": 2500,
-    "height": 1667,
-    "url": "https://unsplash.com/photos/Ps2n0rShqaM",
-    "download_url": "https://picsum.photos/id/18/2500/1667"
+    "url": "https://api.slingacademy.com/public/sample-photos/24.jpeg",
+    "title": "Man whom woman produce may rule his man born choose few century",
+    "user": 29,
+    "id": 24,
+    "description": "Million rise ever something perhaps short culture animal tree radio quickly party doctor couple identify less peace bad both area leader bit simple stuff."
     },
     {
-    "id": "19",
-    "author": "Paul Jarvis",
-    "width": 2500,
-    "height": 1667,
-    "url": "https://unsplash.com/photos/P7Lh0usGcuk",
-    "download_url": "https://picsum.photos/id/19/2500/1667"
-    },
-    {
-    "id": "20",
-    "author": "Aleks Dorohovich",
-    "width": 3670,
-    "height": 2462,
-    "url": "https://unsplash.com/photos/nJdwUHmaY8A",
-    "download_url": "https://picsum.photos/id/20/3670/2462"
-    },
-    {
-    "id": "21",
-    "author": "Alejandro Escamilla",
-    "width": 3008,
-    "height": 2008,
-    "url": "https://unsplash.com/photos/jVb0mSn0LbE",
-    "download_url": "https://picsum.photos/id/21/3008/2008"
-    },
-    {
-    "id": "22",
-    "author": "Alejandro Escamilla",
-    "width": 4434,
-    "height": 3729,
-    "url": "https://unsplash.com/photos/du_OrQAA4r0",
-    "download_url": "https://picsum.photos/id/22/4434/3729"
-    },
-    {
-    "id": "23",
-    "author": "Alejandro Escamilla",
-    "width": 3887,
-    "height": 4899,
-    "url": "https://unsplash.com/photos/8yqds_91OLw",
-    "download_url": "https://picsum.photos/id/23/3887/4899"
-    },
-    {
-    "id": "24",
-    "author": "Alejandro Escamilla",
-    "width": 4855,
-    "height": 1803,
-    "url": "https://unsplash.com/photos/cZhUxIQjILg",
-    "download_url": "https://picsum.photos/id/24/4855/1803"
-    },
-    {
-    "id": "25",
-    "author": "Alejandro Escamilla",
-    "width": 5000,
-    "height": 3333,
-    "url": "https://unsplash.com/photos/Iuq0EL4EINY",
-    "download_url": "https://picsum.photos/id/25/5000/3333"
-    },
-    {
-    "id": "26",
-    "author": "Vadim Sherbakov",
-    "width": 4209,
-    "height": 2769,
-    "url": "https://unsplash.com/photos/tCICLJ5ktBE",
-    "download_url": "https://picsum.photos/id/26/4209/2769"
-    },
-    {
-    "id": "27",
-    "author": "Yoni Kaplan-Nadel",
-    "width": 3264,
-    "height": 1836,
-    "url": "https://unsplash.com/photos/iJnZwLBOB1I",
-    "download_url": "https://picsum.photos/id/27/3264/1836"
-    },
-    {
-    "id": "28",
-    "author": "Jerry Adney",
-    "width": 4928,
-    "height": 3264,
-    "url": "https://unsplash.com/photos/_WiFMBRT7Aw",
-    "download_url": "https://picsum.photos/id/28/4928/3264"
-    },
-    {
-    "id": "29",
-    "author": "Go Wild",
-    "width": 4000,
-    "height": 2670,
-    "url": "https://unsplash.com/photos/V0yAek6BgGk",
-    "download_url": "https://picsum.photos/id/29/4000/2670"
+    "url": "https://api.slingacademy.com/public/sample-photos/25.jpeg",
+    "title": "Certainly than need enjoy understand right",
+    "user": 15,
+    "id": 25,
+    "description": "Message during performance especially care alone wind many hour president lose place write."
     }
     ]
+
+
     """.data(using: .utf8)!
     
     do {
